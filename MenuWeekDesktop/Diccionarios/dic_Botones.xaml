@@ -201,17 +201,18 @@
                 </Style>
             </Setter.Value>
         </Setter>
-        <Setter Property="Background" Value="#FFFB8E8E"/>
+        <Setter Property="Background" Value="#FF2FA4C7"/>
         <Setter Property="BorderBrush" Value="#FF707070"/>
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Padding" Value="1"/>
+        <Setter Property="Margin" Value="4"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border x:Name="border" CornerRadius="15" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                    <Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
                         <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -219,17 +220,17 @@
                             <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="#FFF9A1A1"/>
+                            <Setter Property="Background" TargetName="border" Value="#FF26939E"/>
                             <Setter Property="Foreground" Value="White"/>
                             <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="#FFF9A1A1"/>
+                            <Setter Property="Background" TargetName="border" Value="#FF26939E"/>
                             <Setter Property="Foreground" Value="White"/>
                             <Setter Property="BorderBrush" TargetName="border" Value="White"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Background" TargetName="border" Value="#FFFD3131"/>
+                            <Setter Property="Background" TargetName="border" Value="#FF1AB050"/>
                             <Setter Property="Foreground" Value="White"/>
                             <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
                         </Trigger>

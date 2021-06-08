@@ -9,6 +9,6 @@
       Title="pg_Portada">
 
     <Grid>
-        
+        <Image Source="/Imagenes/logoAppBig.png"/>
     </Grid>
 </Page>

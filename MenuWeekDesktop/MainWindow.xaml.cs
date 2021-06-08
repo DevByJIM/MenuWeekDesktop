@@ -1,4 +1,5 @@
 ﻿using Capa_Logica;
+using MenuWeekDesktop.Paginas;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -25,6 +27,7 @@ namespace MenuWeekDesktop
         public MainWindow()
         {
             InitializeComponent();
+            frmMain.Navigate(new pg_Portada());
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
@@ -33,10 +36,31 @@ namespace MenuWeekDesktop
         }
 
 
+        private void btnBarra(object sender, RoutedEventArgs e)
+        {
+            foreach (ToggleButton btn in gridBarra.Children) btn.IsChecked = false;
+            ((ToggleButton)sender).IsChecked = true;
+
+            switch (((ToggleButton)sender).Name)
+            {
+                case "btnPortada":
+                    frmMain.Navigate(new pg_Portada());
+                    break;
+                case "btnUsuarios":
+                    frmMain.Navigate(new pg_Usuarios());
+                    break;
+            }
+        }
+
 
         private void AjusteFuentes(object sender, SizeChangedEventArgs e)
         {
             lbTitulo.FontSize = this.ActualHeight * 0.1;
+
+            foreach(ToggleButton btn in gridBarra.Children)
+            {
+                btn.FontSize = this.ActualHeight * 0.026;
+            }
         }
     }
 }
