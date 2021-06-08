@@ -2,22 +2,20 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Capa_Logica
 {
-    public class Cls_Ingredientes
+    public class Cls_Platos
     {
-        List<Ingrediente> lstIngrediente = null;
+        List<Plato> lstPlato = null;
 
         /// <summary>
         /// Clase que nos devuelve un listado con los ingredientes.
         /// </summary>
-        public static DataTable listadoIngredientes()
+        public static DataTable listadoPlatos()
         {
-            return MenuWeek.ConsultaSQL("SELECT * FROM tb_Ingredientes");
+            return MenuWeek.ConsultaSQL("SELECT * FROM tb_Platos");
         }
     }
 }

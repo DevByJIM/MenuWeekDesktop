@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace MenuWeekDesktop.Paginas
 {
     /// <summary>
-    /// Lógica de interacción para pg_Platos.xaml
+    /// Lógica de interacción para pg_Ingredientes.xaml
     /// </summary>
-    public partial class pg_Platos : Page
+    public partial class pg_Ingredientes : Page
     {
-        public pg_Platos()
+        public pg_Ingredientes()
         {
             InitializeComponent();
             cargarDatos();
@@ -29,12 +29,12 @@ namespace MenuWeekDesktop.Paginas
 
         private void cargarDatos()
         {
-            dgv_Platos.ItemsSource = Cls_Platos.listadoPlatos().DefaultView;
+            dgv_Ingredientes.ItemsSource = Cls_Ingredientes.listadoIngredientes().DefaultView;
         }
 
         private void AjusteFuentes(object sender, SizeChangedEventArgs e)
         {
-            dgv_Platos.FontSize = this.ActualHeight * 0.02;
+            dgv_Ingredientes.FontSize = this.ActualHeight * 0.02;
         }
     }
 }

@@ -49,6 +49,15 @@ namespace MenuWeekDesktop
                 case "btnUsuarios":
                     frmMain.Navigate(new pg_Usuarios());
                     break;
+                case "btnPlatos":
+                    frmMain.Navigate(new pg_Platos());
+                    break;
+                case "btnIngredientes":
+                    frmMain.Navigate(new pg_Ingredientes());
+                    break;
+                case "btnListas":
+                    frmMain.Navigate(new pg_ListaCompra());
+                    break;
             }
         }
 

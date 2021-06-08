@@ -84,7 +84,7 @@ namespace Capa_Datos
         /// Método que ejecuta un Procedimiento Almacenado y devuelve un DataTable.
         /// </summary>
         /// <param name="Listado desde SP"></param>
-        public DataTable Listado(String NombreSp, List<Cls_Parametros> lst)
+        public static DataTable Listado(String NombreSp, List<Cls_Parametros> lst)
         {
             DataTable dt = new DataTable();
             MySqlDataAdapter da;
@@ -119,7 +119,7 @@ namespace Capa_Datos
         /// Método que ejecuta un Procedimiento Almacenado y no devuelve nada.
         /// </summary>
         /// <param name="Ejecutar un SP"></param>
-        public void Ejecutar_SP(String NombreSP, List<Cls_Parametros> lst)
+        public static void Ejecutar_SP(String NombreSP, List<Cls_Parametros> lst)
         {
             MySqlCommand cmd;
 

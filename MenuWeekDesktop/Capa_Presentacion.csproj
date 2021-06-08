@@ -90,6 +90,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Paginas\pg_Ingredientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\pg_ListaCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Paginas\pg_Platos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +112,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Paginas\pg_Ingredientes.xaml.cs">
+      <DependentUpon>pg_Ingredientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\pg_ListaCompra.xaml.cs">
+      <DependentUpon>pg_ListaCompra.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\pg_Platos.xaml.cs">
       <DependentUpon>pg_Platos.xaml</DependentUpon>
     </Compile>

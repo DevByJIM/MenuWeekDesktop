@@ -20,7 +20,7 @@
             <ColumnDefinition Width="0.1*"/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid x:Name="dgv_Usuarios" Grid.Row="1" Grid.Column="1" AlternatingRowBackground="LightGray" Style="{StaticResource DGV_001}"
+        <DataGrid x:Name="dgv_Usuarios" Grid.Row="1" Grid.Column="1" AlternatingRowBackground="#FFB9E6F3" Style="{StaticResource DGV_001}"
                   AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True" TabIndex="9">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="dgMail" Binding="{Binding USE_MAIL}" Header="MAIL" Width="2*"/>

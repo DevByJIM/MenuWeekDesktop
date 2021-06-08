@@ -1,0 +1,38 @@
+﻿<Page x:Class="MenuWeekDesktop.Paginas.pg_Ingredientes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MenuWeekDesktop.Paginas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" SizeChanged="AjusteFuentes"
+      Title="pg_Ingredientes">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dgv_Ingredientes" Grid.Row="1" Grid.Column="1" AlternatingRowBackground="#FFB9E6F3" Style="{StaticResource DGV_001}"
+                  AutoGenerateColumns="False" SelectionMode="Single" IsReadOnly="True" TabIndex="9">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="dgClave" Binding="{Binding  ING_CLAVE}" Header="CLAVE" Width="*"/>
+                <DataGridTextColumn x:Name="dgNombre" Binding="{Binding ING_NOMBRE}" Header="NOMBRE" Width="*"/>
+                <DataGridTextColumn x:Name="dgDescrip" Binding="{Binding ING_DESCRIP}" Header="DESCRIPCION" Width="*"/>
+                <DataGridTextColumn x:Name="dgTipo" Binding="{Binding ING_TIPO}" Header="TIPO" Width="0.7*"/>
+                <DataGridTextColumn x:Name="dgIcono" Binding="{Binding ING_ICONO}" Header="ICONO" Width="0.7*"/>
+                <DataGridTextColumn x:Name="dgUser" Binding="{Binding ING_CLAUSE}" Header="USUARIO" Width="0.7*"/>
+                <DataGridTextColumn x:Name="dgunidad" Binding="{Binding ING_UMEDIDA}" Header="UNIDAD" Width="*"/>
+                <DataGridTextColumn x:Name="dgAltaFecha" Binding="{Binding ING_ALTAFECHA}" Header="ALTAFECHA" Width="0.7*"/>
+                <DataGridTextColumn x:Name="dgFechor" Binding="{Binding ELE_FECHOR}" Header="FECHOR" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
